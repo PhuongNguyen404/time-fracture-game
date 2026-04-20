@@ -1,0 +1,106 @@
+{
+  "Title": "Time Fracture: Commander's Path",
+  "Start": "hub",
+  "Credits": "Phuong Nguyen",
+  "Locations": {
+
+    "hub": {
+      "Body": "You weren’t supposed to be doing anything crazy.\n\nJust observe. Watch timelines, log data, don’t touch anything. That was the job.\n\nSounded simple. Safe.\n\nBack home, things were getting tense. Not full war… but close enough that people stopped joking about it. That’s why you signed up. Thought maybe you could help somehow.\n\nJust not like this.\n\nThe device glitches.\n\nNot a normal crash. Not a system error. This felt… wrong. Like something reached in and broke it.\n\nThe Command Hub is falling apart. Lights flicker, alarms half-working, the whole thing humming like it’s about to give out.\n\nThree timelines open.\n\nAnd then—\n\nA voice.\n\n\"So this is where you start.\"\n\nYou freeze.\n\n\"Don’t mess it up this time.\"\n\n…this time?\n\nThe signal cuts.\n\nYou’re not a soldier. Not really. You’ve studied battles, simulated them… but you’ve never actually been in one.\n\nStill.\n\nIf no one else is fixing this… then it’s on you.\n\nYou take a breath.\n\nAlright.\n\nLet’s see what you can actually do.",
+      "Choices": [
+        { "Text": "Go to Roman Era (Caesar vs Vercingetorix)", "Target": "roman_battle" },
+        { "Text": "Go to Medieval Era (Joan of Arc at Orléans)", "Target": "medieval_battle" },
+        { "Text": "Go to WWII (yeah… this one feels serious)", "Target": "ww2_battle" },
+        { "Text": "Check the time device", "Action": "check_device" },
+        { "Text": "Inspect the broken console", "Action": "console" }
+      ]
+    },
+
+    "roman_battle": {
+      "Body": "You get dropped into the Siege of Alesia.\n\nYeah… not great timing.\n\nCaesar’s here. Vercingetorix is out there. Romans are surrounded.\n\nThis isn’t a simulation.\n\nPeople are actually going to die based on what happens next.\n\nYou feel it hit you all at once.\n\nYou wanted to help.\n\nNow you have to prove you can.",
+      "Choices": [
+        {
+          "Text": "Tell them to hold formation and stay disciplined",
+          "Target": "roman_success"
+        },
+        {
+          "Text": "Push out hard and try to break the siege fast",
+          "Target": "roman_fail"
+        }
+      ]
+    },
+
+    "roman_success": {
+      "Body": "You force yourself to stay calm.\n\nFormation holds.\n\nNo panic.\n\nSlowly, the Romans push back.\n\nIt’s not heroic. Not flashy.\n\nJust discipline.\n\nAnd somehow… it works.\n\nThe Gauls collapse. Vercingetorix falls.\n\nYou didn’t win the battle.\n\nYou just… didn’t lose it.\n\nCaesar studies you for a second, then hands you a fragment.\n\nYour first real war.\n\nYour hands are still shaking.",
+      "Item": "fragment_roman",
+      "Choices": [
+        { "Text": "Leave (back to hub)", "Target": "hub" }
+      ]
+    },
+
+    "roman_fail": {
+      "Body": "You commit too fast.\n\nThe push turns messy. Lines break. Confusion spreads.\n\nFor a second, everything almost collapses.\n\nYou feel it.\n\nThat weight.\n\nYou can mess this up.\n\nBad.\n\nYou don’t get the fragment.\n\nAnd now you know this isn’t just a game.",
+      "Choices": [
+        { "Text": "Try again… but think this time", "Target": "roman_battle" }
+      ]
+    },
+
+    "medieval_battle": {
+      "Body": "Now you’re at Orléans.\n\nJoan of Arc is right there.\n\nEnglish forces are pushing hard.\n\nEveryone’s looking at you like you’ve got answers.\n\nYou don’t.\n\nBut you’ve been here before now.\n\nYou know what hesitation does.\n\nYou straighten up a bit.\n\nAlright… let’s run it.",
+      "Choices": [
+        {
+          "Text": "Push forward. Take the fight to them",
+          "Target": "medieval_success"
+        },
+        {
+          "Text": "Hold position and play it safe",
+          "Target": "medieval_fail"
+        }
+      ]
+    },
+
+    "medieval_success": {
+      "Body": "You don’t hesitate.\n\nYou commit.\n\nThe push is chaotic, loud, barely controlled… but it works.\n\nThe siege breaks.\n\nThe whole battlefield shifts.\n\nPeople cheer.\n\nJoan thanks you like you actually mattered.\n\nThat… hits.\n\nYou take the fragment.\n\nYou’re getting better at this.\n\nBut something’s bothering you.\n\nWinning battles feels good.\n\nBut it doesn’t feel like it fixes anything.",
+      "Item": "fragment_medieval",
+      "Choices": [
+        { "Text": "Back to hub", "Target": "hub" }
+      ]
+    },
+
+    "medieval_fail": {
+      "Body": "You hold back.\n\nToo much.\n\nNothing changes.\n\nThe siege drags on.\n\nMore fighting. More loss.\n\nNo progress.\n\nYou feel it again.\n\nPlaying safe doesn’t save people either.",
+      "Choices": [
+        { "Text": "Try again", "Target": "medieval_battle" }
+      ]
+    },
+
+    "ww2_battle": {
+      "Body": "Everything slows down here.\n\nNo battlefield.\n\nNo formations.\n\nJust a room.\n\nMaps. Voices. Arguments.\n\nThe decision is clear.\n\nThe bomb.\n\nYou’ve seen war now.\n\nReal war.\n\nAnd this?\n\nThis isn’t about winning anymore.\n\nThis is about what kind of world comes after.",
+      "Choices": [
+        {
+          "Text": "End it fast. Do whatever it takes",
+          "Target": "ww2_history"
+        },
+        {
+          "Text": "No. There has to be another way",
+          "Target": "ww2_alternate"
+        }
+      ]
+    },
+
+    "ww2_history": {
+      "Body": "You agree.\n\nEnd it fast.\n\nThat’s what matters, right?\n\nThe bomb drops.\n\nThe war ends.\n\nPeople celebrate.\n\nBut you don’t.\n\nYou’ve seen what war looks like now.\n\nAnd this doesn’t feel like victory.\n\nJust… silence after something too big.\n\nYou take the final fragment.\n\nYou won.\n\nSo why doesn’t it feel like it?",
+      "Item": "fragment_ww2",
+      "Choices": [
+        { "Text": "Back to hub", "Target": "hub" }
+      ]
+    },
+
+    "ww2_alternate": {
+      "Body": "You push back.\n\nHard.\n\nThe decision changes.\n\nThe war drags on longer.\n\nDifferent losses. Different pain.\n\nNo clean ending.\n\nHistory shifts.\n\nYou still get the fragment.\n\nBut now you understand something.\n\nThere isn’t always a \"right\" choice.\n\nJust different consequences.",
+      "Item": "fragment_ww2",
+      "Choices": [
+        { "Text": "Back to hub", "Target": "hub" }
+      ]
+    }
+  }
+}
